@@ -26,3 +26,4 @@ async function probarConexionBaseDatos() {
     }
 }
 
+probarConexionBaseDatos()

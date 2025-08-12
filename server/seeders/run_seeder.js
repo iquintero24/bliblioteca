@@ -1,15 +1,20 @@
 /*llama  a los loads*/
 
-import { cargraAutoresBd } from "./load_autores.js";
+import { cargarAutoresBd } from "./load_autores.js";
+import { cargarLibrosBd } from "./load_libros.js";
 import { cargraUsuariosBd } from "./load_usuarios.js"
 
-debugger
+
 
 (async ()=>{
     try {
         console.log("inciando seeders")
         await cargraUsuariosBd()
-        await cargraAutoresBd()
+        await cargarAutoresBd()
+        await cargarLibrosBd()
+        
+
+
     } catch (error) {
         console.error('error al ejecutar los seeders',error.message)
     } finally{
